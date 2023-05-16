@@ -1,0 +1,1 @@
+web: gunicorn md82.wsgi
