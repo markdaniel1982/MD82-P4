@@ -9,6 +9,12 @@ body {
     color: #4A4A4F;
 }
 
+#navlogo {
+    height: 150px;
+    width: 250px;
+    margin-left: -50px;
+}
+
 .red-o {
     color: #E84610;
 }
@@ -50,6 +56,22 @@ body {
     color: white;
     margin: 4px;
     text-transform: uppercase;
+}
+
+.fadeout {
+    position: relative;
+    overflow: hidden;
+}
+
+.fadeout .read-more {
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), 20%, rgba(255, 255, 255, 1));
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
 }
 
 .masthead {
