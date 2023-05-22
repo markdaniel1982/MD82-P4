@@ -13,7 +13,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://placehold.co/600x400" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -83,10 +83,20 @@
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
+
+                        <!-- allow users to delete their own comments -->
+                        {% if user.is_authenticated %}
+                        {% if user.username == comment.name %}
+                        <button id="authordelete" class="btn btn-sm btn-danger">x</button>
+                        {% endif %}
+                        {% endif %}
+
                     </p>
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
+
                 </div>
+
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
@@ -97,7 +107,7 @@
 
 
                 {% if commented %}
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
                     Your comment has been posted!
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
