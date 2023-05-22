@@ -85,11 +85,17 @@
                         </span> wrote:
 
                         <!-- allow users to delete their own comments -->
-                        {% if user.is_authenticated %}
-                        {% if user.username == comment.name %}
-                        <button id="authordelete" class="btn btn-sm btn-danger">x</button>
-                        {% endif %}
-                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.username == comment.name %}
+
+                    <form action="{% url 'comment_delete' comment.id post.slug %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Delete" />
+                    </form>
+
+                    <!-- <button id="authordelete" class="btn btn-sm btn-danger">x</button> -->
+                    {% endif %}
+                    {% endif %}
 
                     </p>
                     <!-- The body of the comment goes before the | -->
