@@ -53,7 +53,15 @@
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-                    <li><span class="display-1 logotext">My Fishing Adventures</span></li>
+                    <li>
+                    <li>
+                        {% if request.user.is_superuser %}
+
+                        <a href="{% url 'add_post' %}"><button class="btn btn-secondary">Add Post</button></a>
+
+                        {% endif %}
+                    </li>
+                    <span class="display-1 logotext">My Fishing Adventures</span></li>
                 </ul>
                 <span class="navbar-text text-muted">
                     Fishing Adventures in Northern Sweden!

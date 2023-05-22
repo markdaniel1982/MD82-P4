@@ -2,15 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-{% if request.user.is_superuser %}
 
-<div class="row">
-    <div class="d-md-block col-md-6">
-        <a href="{% url 'add_post' %}"><button class="btn btn-info">Add Post</button></a>
-    </div>
-</div>
-
-{% endif %}
 <div class="container-fluid">
     <div class="row">
 
@@ -23,7 +15,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="https://placehold.co/600x400">
+                                <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/300?blur=2">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
