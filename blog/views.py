@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views.generic import CreateView
 from django.views.generic.edit import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
@@ -86,3 +87,9 @@ class CommentDeleteView(DeleteView):
     def get_success_url(self):
         post_slug = self.kwargs["post_slug"]
         return f'/{post_slug}/'
+
+
+class AddPostView(CreateView):
+    model = Post
+    template_name = 'add_post.html'
+    fields = '__all__'

@@ -4,7 +4,7 @@
 <html class="h-100">
 
 <head>
-    <title>My Fishing Adventures</title>
+    <title>{% block title %}My Fishing Adventures{% endblock %}</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span><img id="navlogo"
                         src="{% static 'media/mfa_logo.png' %}" alt=""></span></a>
@@ -42,8 +42,8 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <span class="nav-link"><strong>{{ user }}</strong><a href="{% url 'account_logout' %}">(<strong>
-                                    Logout </strong>)</a></span>
+                        <span class="nav-link active"><strong>{{ user }} </strong><a id="nav-link-logout"
+                                href="{% url 'account_logout' %}">(<small>Logout</small>)</a></span>
                     </li>
                     {% else %}
                     <li class="nav-item">
