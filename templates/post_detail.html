@@ -87,11 +87,12 @@
                         </span><span class="deletebutton"> wrote:
                             <!-- allow users to delete their own comments -->
                             {% if request.user.is_authenticated %}
-                            {% if request.user.username == comment.name %}
+                            {% if request.user.username == comment.name or request.user.is_superuser %}
 
                             <form action="{% url 'comment_delete' comment.id post.slug %}" method="POST">
                                 {% csrf_token %}
-                                <input class="btn btn-danger authordelete" type="submit" value="x" alt="Delete Comment"
+                                <input class="btn btn-danger authordelete" type="submit" value="x"
+                                    onclick="return confirm('Delete Comment?')" alt="Delete Comment"
                                     aria-label="Delete Comment" />
                             </form>
                         </span>
