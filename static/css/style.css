@@ -50,6 +50,10 @@ body {
     background-color: transparent;
 }
 
+.excerpt {
+    height: 50px;
+}
+
 /* The Modal (background) */
 .modal {
     display: none;

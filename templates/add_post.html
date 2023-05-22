@@ -3,12 +3,14 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <h1>Add Post</h1>
-<div class="row justify-content-lg-center">
-    <div class="col-lg-auto">
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class='btn btn-info' type="submit" value="Post">Add Post</button>
+<div class="row">
+    <div class="mx-auto col-10 col-md-8 col-lg-6">
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class='btn btn-info' type="submit" value="Post">Add Post</button>
+        </div>
     </div>
 </div>
 

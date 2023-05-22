@@ -4,7 +4,7 @@ from django.views.generic import CreateView
 from django.views.generic.edit import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 from django.urls import reverse, reverse_lazy
 
 
@@ -91,5 +91,7 @@ class CommentDeleteView(DeleteView):
 
 class AddPostView(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'add_post.html'
-    fields = '__all__'
+
+    # fields = '__all__'
