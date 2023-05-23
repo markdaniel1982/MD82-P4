@@ -99,3 +99,9 @@ class EditPostView(UpdateView):
     model = Post
     form_class = EditPostForm
     template_name = 'update_post.html'
+
+
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('home')

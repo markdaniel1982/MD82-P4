@@ -27,8 +27,10 @@
                                 <div>
                                     <h2 class="card-title">{{ post.title }}</h2>
                                     {% if request.user.is_superuser %}
-                                    <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><small><i
-                                                class="far fa-edit"></i></small></a>
+                                    <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><i
+                                            class="far fa-edit"></i></a>
+                                    <a href="{% url 'delete_post' post.slug  %}" aria-label="Delete Post"><i
+                                            class="far fa-trash"></i></a>
                                     {% endif %}
                                 </div>
                                 <p class="card-text">{{ post.excerpt }}</p>
