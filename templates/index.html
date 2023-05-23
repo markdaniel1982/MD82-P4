@@ -20,19 +20,16 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}
-                                        {% if request.user.is_superuser %}
-                                        <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"
-                                            style="inline-block"><small><i class="far fa-edit"></i></small></a>
-                                        {% endif %}
-                                    </p>
-
+                                    <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}" class="post-link">
                                 <div>
                                     <h2 class="card-title">{{ post.title }}</h2>
-
+                                    {% if request.user.is_superuser %}
+                                    <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><small><i
+                                                class="far fa-edit"></i></small></a>
+                                    {% endif %}
                                 </div>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
