@@ -31,14 +31,13 @@
                                 </div>
                             </div>
                             <div class="fadeout">
-                                <p>
-                                    <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                        <div>
-                                            <h2 class="card-title">{{ post.title }}</h2>
-                                        </div>
-                                        <p class="card-text">{{ post.content|slice:":200" }}</p>
+                                <div>
+                                    <div>
+                                        <h2 class="card-title">{{ post.title }}</h2>
+                                    </div>
+                                    <p class="card-text">{{ post.content|slice:":200" }}</p>
                                     </a>
-                                </p>
+                                </div>
                                 <p class="read-more"><button class="btn btn-info"><a
                                             href="{% url 'post_detail' post.slug  %}" class="post-link">Read
                                             More</a></button></p>
@@ -48,6 +47,7 @@
                                 <i class="far fa-heart"></i> {{ post.number_of_likes }} |
                                 <i class="far fa-comments"></i> {{ post.number_of_comments }}
                             </p>
+
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,20 @@ body {
 #navlogo {
     height: 150px;
     width: auto;
+}
 
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    align-items: center;
+}
+
+a {
+    color: #4A4A4F;
+    text-decoration: none;
 }
 
 .red-o {
@@ -128,7 +141,7 @@ body {
 } */
 
 .fadeout {
-    max-height: 120px;
+    max-height: 200px;
     position: relative;
     overflow: hidden;
 }
