@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 from django.views.generic.edit import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm, PostForm
+from .forms import CommentForm, PostForm, EditPostForm
 from django.urls import reverse, reverse_lazy
 
 
@@ -94,4 +94,8 @@ class AddPostView(CreateView):
     form_class = PostForm
     template_name = 'add_post.html'
 
-    # fields = '__all__'
+
+class EditPostView(UpdateView):
+    model = Post
+    form_class = EditPostForm
+    template_name = 'update_post.html'

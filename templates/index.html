@@ -15,19 +15,28 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="https://picsum.photos//300?blur=4">
+                                <img class="card-img-top" src="https://picsum.photos//300?blur=2">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author">Author: {{ post.author }}
+                                        {% if request.user.is_superuser %}
+                                        <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"
+                                            style="inline-block"><small><i class="far fa-edit"></i></small></a>
+                                        {% endif %}
+                                    </p>
+
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
+                                <div>
+                                    <h2 class="card-title">{{ post.title }}</h2>
+
+                                </div>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-                            <hr />
+
                             <p class="card-text text-muted h6">{{ post.created_on}}
                                 <i class="far fa-heart"></i> {{ post.number_of_likes }} |
                                 <i class="far fa-comments"></i> {{ post.number_of_comments }}

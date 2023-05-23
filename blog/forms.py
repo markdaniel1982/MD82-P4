@@ -29,3 +29,19 @@ class PostForm(forms.ModelForm):
             'content': forms.Textarea(attrs={'class': 'form-control'}),
             'status': forms.Select(attrs={'class': 'form-control'})
         }
+
+
+class EditPostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = (
+            'featured_image',
+            'excerpt',
+            'content',
+        )
+
+        widgets = {
+            'featured_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'excerpt': forms.Textarea(attrs={'class': 'form-control'}),
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
+        }
