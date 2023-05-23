@@ -16,7 +16,6 @@ class PostForm(forms.ModelForm):
                   'slug',
                   'author',
                   'featured_image',
-                  'excerpt',
                   'content',
                   )
 
@@ -25,7 +24,6 @@ class PostForm(forms.ModelForm):
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
             'featured_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-            'excerpt': forms.Textarea(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
             'status': forms.Select(attrs={'class': 'form-control'})
         }
@@ -36,12 +34,10 @@ class EditPostForm(forms.ModelForm):
         model = Post
         fields = (
             'featured_image',
-            'excerpt',
             'content',
         )
 
         widgets = {
             'featured_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-            'excerpt': forms.Textarea(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
         }

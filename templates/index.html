@@ -20,21 +20,29 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author">Author: {{ post.author }}
+                                        {% if request.user.is_superuser %}
+                                        <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><i
+                                                class="far fa-edit"></i></a>
+                                        <a href="{% url 'delete_post' post.slug  %}" aria-label="Delete Post"><i
+                                                class="far fa-trash"></i></a>
+                                        {% endif %}
+                                    </p>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <div>
-                                    <h2 class="card-title">{{ post.title }}</h2>
-                                    {% if request.user.is_superuser %}
-                                    <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><i
-                                            class="far fa-edit"></i></a>
-                                    <a href="{% url 'delete_post' post.slug  %}" aria-label="Delete Post"><i
-                                            class="far fa-trash"></i></a>
-                                    {% endif %}
-                                </div>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
+                            <div class="fadeout">
+                                <p>
+                                    <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                                        <div>
+                                            <h2 class="card-title">{{ post.title }}</h2>
+                                        </div>
+                                        <p class="card-text">{{ post.content|slice:":200" }}</p>
+                                    </a>
+                                </p>
+                                <p class="read-more"><button class="btn btn-info"><a
+                                            href="{% url 'post_detail' post.slug  %}" class="post-link">Read
+                                            More</a></button></p>
+                            </div>
 
                             <p class="card-text text-muted h6">{{ post.created_on}}
                                 <i class="far fa-heart"></i> {{ post.number_of_likes }} |
