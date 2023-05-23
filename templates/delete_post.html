@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+{% if request.user.is_superuser %}
 <div class="container">
     <div class="mx-auto col-10 col-md-8 col-lg-6"><br>
         <h1>Delete Post:</h1>
@@ -14,4 +15,10 @@
     </div>
 
 </div>
+{% else %}
+<div class="container">
+    <h1>This not the page you are looking for...!</h1><br><br>
+    click <a href="{% url 'home' %}"><strong>here</strong></a> to go back to the home page
+</div>
+{% endif %}
 {% endblock content %}
