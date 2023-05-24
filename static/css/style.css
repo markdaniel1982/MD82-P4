@@ -11,6 +11,10 @@ body {
     color: #4A4A4F;
 }
 
+li {
+    display: contents;
+}
+
 .navbar-brand {
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
@@ -27,6 +31,7 @@ body {
     top: 14px;
     left: 10%;
 }
+
 
 #navlogo {
     height: 150px;
