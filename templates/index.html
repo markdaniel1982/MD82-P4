@@ -25,12 +25,12 @@
                                         <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><i
                                                 class="far fa-edit"></i></a>
                                         <a href="{% url 'delete_post' post.slug  %}" aria-label="Delete Post"><i
-                                                class="far fa-trash"></i></a>
+                                                class="fa-solid fa-trash-can"></i></a>
                                         {% endif %}
                                     </p>
                                 </div>
                                 <div class="category-flash">
-                                    <p><i class="fa-solid fa-list-dropdown"></i> | {{ post.category_name }}</p>
+                                    <p><i class="fa-solid fa-table-list"></i></i> | {{ post.category_name }}</p>
                                 </div>
                             </div>
                             <div class="fadeout">

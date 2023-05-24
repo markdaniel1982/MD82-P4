@@ -12,10 +12,10 @@
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">
                     {% if request.user.is_superuser %}
-                    <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><i
+                    <a class="link-icons" href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><i
                             class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="{% url 'delete_post' post.slug  %}" aria-label="Delete Post"><i class="fa-solid fa-trash"
-                            alt="Delete"></i></a>
+                    <a class="link-icons" href="{% url 'delete_post' post.slug  %}" aria-label="Delete Post"><i
+                            class="fa-solid fa-trash" alt="Delete"></i></a>
                     {% endif %}
                     {{ post.author }} | {{ post.created_on }}
                 </p>

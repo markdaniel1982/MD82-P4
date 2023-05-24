@@ -131,6 +131,10 @@ a {
     background-image: linear-gradient(to bottom, transparent, white);
 }
 
+.link-icons {
+    color: #23BBBB;
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
