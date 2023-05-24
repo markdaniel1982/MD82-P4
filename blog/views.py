@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic import CreateView, UpdateView
 from django.views.generic.edit import DeleteView
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from .forms import CommentForm, PostForm, EditPostForm
 from django.urls import reverse, reverse_lazy
 
@@ -93,6 +93,12 @@ class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
+
+
+class AddCategoryView(CreateView):
+    model = Category
+    template_name = 'add_category.html'
+    fields = '__all__'
 
 
 class EditPostView(UpdateView):

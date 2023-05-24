@@ -29,6 +29,9 @@
                                         {% endif %}
                                     </p>
                                 </div>
+                                <div class="category-flash">
+                                    <p> {{ post.category_name }}</p>
+                                </div>
                             </div>
                             <div class="fadeout">
                                 <div>
@@ -45,8 +48,9 @@
 
                             <p class="card-text text-muted h6">{{ post.created_on}}
                                 <i class="far fa-heart"></i> {{ post.number_of_likes }} |
-                                <i class="far fa-comments"></i> {{ post.number_of_comments }}
+                                <i class="far fa-comments"></i> {{ post.number_of_comments }} |
                             </p>
+
 
                         </div>
                     </div>

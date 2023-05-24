@@ -86,6 +86,25 @@ a {
     min-width: 30%;
     left: -2px;
     background-color: #23BBBB;
+    border-radius: 5px;
+}
+
+.category-flash {
+    position: absolute;
+    top: 2%;
+    width: fit-content;
+    height: 34px;
+    right: -5px;
+    background-color: #bb9223;
+    border-radius: 5px;
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.category-flash p {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .author {

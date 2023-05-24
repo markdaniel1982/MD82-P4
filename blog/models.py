@@ -7,6 +7,16 @@ from django.urls import reverse
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('home')
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -20,6 +30,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
+    category = models.CharField(max_length=255, default='Fishing')
 
     class Meta:
         ordering = ["-created_on"]
@@ -36,6 +47,9 @@ class Post(models.Model):
     def number_of_comments(self):
         return self.comments.count()
 
+    def category_name(self):
+        return self.category
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
@@ -51,6 +65,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-
-# class Gallery(models.Model)
