@@ -66,12 +66,12 @@
     </nav>
     {% if request.user.is_superuser %}
     <div>
-        <nav class="navbar navbar-sm navbar-light bg-primary">
-            <div>
-                Admin Panel
+        <nav class="navbar navbar-sm navbar-light bg-secondary">
+            <div class="admin-panel">
+                Admin Panel |
                 <span>
-                    <a href="{% url 'add_post' %}"><button class="btn btn-secondary">Add Post</button></a>
-                    <a href="{% url 'add_category' %}"><button class="btn btn-secondary">Add Category</button></a>
+                    <a href="{% url 'add_post' %}"><button class="btn btn-light">Add Post</button></a>
+                    <a href="{% url 'add_category' %}"><button class="btn btn-light">Add Category</button></a>
                 </span>
             </div>
         </nav>

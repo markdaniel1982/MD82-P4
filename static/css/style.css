@@ -51,8 +51,8 @@ a {
     text-decoration: none;
 }
 
-.red-o {
-    color: #E84610;
+.admin-panel {
+    padding-left: 1rem;
 }
 
 .thin {
@@ -103,8 +103,7 @@ a {
 }
 
 .category-flash p {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px;
 }
 
 .author {
