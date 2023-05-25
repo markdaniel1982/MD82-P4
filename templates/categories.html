@@ -2,23 +2,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="row">
-    <p class="introduction">
-        Welcome to my blog. Here I will post mainly about fishing, but occasionally about other things too.
-        <br><br>
-        If you want to filter my posts by category, then click on the category displayed in the top right<br>of each
-        picture to display all posts within that category!
-        <br><br>
-        Thanks for popping in.
-    </p>
-</div>
+{% if category_posts %}
 <div class="container-fluid">
     <div class="row">
-
+        <h1>Browse Post by Category: {{ cats }}</h1>
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in post_list %}
+                {% for post in category_posts %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -37,10 +28,6 @@
                                                 class="fa-solid fa-trash-can"></i></a>
                                         {% endif %}
                                     </p>
-                                </div>
-                                <div class="category-flash">
-                                    <p id="category"><i class="fa-solid fa-table-list"></i></i> | <a
-                                            href="{% url 'category' post.category %}">{{ post.category_name }}</a></p>
                                 </div>
                             </div>
                             <div class="fadeout">
@@ -91,5 +78,7 @@
     {% endif %}
 
 </div>
-
+{% else %}
+<h2>Sorry. This page does not exist</h2>
+{% endif %}
 {%endblock%}

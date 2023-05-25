@@ -60,6 +60,13 @@ a {
     padding-left: 1rem;
 }
 
+.introduction {
+    font-family: "Verdana", sans-serif;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
 .thin {
     font-weight: 300;
 }
@@ -109,6 +116,17 @@ a {
 
 .category-flash p {
     padding: 5px;
+}
+
+#category a {
+    text-decoration: none;
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+#category a:hover {
+    color: #23BBBB;
 }
 
 .author {

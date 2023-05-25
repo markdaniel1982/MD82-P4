@@ -8,6 +8,11 @@ from .forms import CommentForm, PostForm, EditPostForm
 from django.urls import reverse, reverse_lazy
 
 
+def CategoryView(request, cats):
+    category_posts = Post.objects.filter(category=cats)
+    return render(request, 'categories.html', {'cats': cats.title, 'category_posts': category_posts})
+
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
