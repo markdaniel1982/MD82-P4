@@ -40,7 +40,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-
+                        <!-- Authorisation to only show logout link when user is logged in -->
                         {% if user.is_authenticated %}
 
                         <span class="nav-link active"><strong>{{ user }} </strong><a id="nav-link-logout"
@@ -63,6 +63,7 @@
             </div>
         </div>
     </nav>
+    <!-- Authorisation - Only for Admin/superusers -->
     {% if request.user.is_superuser %}
     <div>
         <nav class="navbar navbar-sm navbar-light bg-secondary">
@@ -106,7 +107,6 @@
             <i class="fab fa-youtube-square ms-3"></i>
         </p>
     </footer>
-    <!-- <script src="{% static 'js/modal.js' %}"></script> -->
     <script>
         setTimeout(function () {
             let messages = document.getElementById("msg");

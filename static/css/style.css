@@ -63,11 +63,9 @@ a {
 .introduction {
     font-family: "Verdana", sans-serif;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     justify-content: center;
-    border-bottom: #445261;
-    border-width: 2px;
-    border-style: solid;
 }
 
 .category-title {

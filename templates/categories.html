@@ -21,6 +21,7 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author | {{ post.author }}
+                                        <!-- Authorisation to only allow Admin to edit posts and categories -->
                                         {% if request.user.is_superuser %}
                                         <a href="{% url 'update_post' post.slug  %}" aria-label="Edit Post"><i
                                                 class="far fa-edit"></i></a>
