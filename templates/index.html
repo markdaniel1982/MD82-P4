@@ -41,9 +41,9 @@
                                     <p class="card-text">{{ post.content|slice:":200" }}</p>
                                     </a>
                                 </div>
-                                <p class="read-more"><button class="btn btn-info"><a
-                                            href="{% url 'post_detail' post.slug  %}" class="post-link">Read
-                                            More</a></button></p>
+                                <p class="read-more"><a href="{% url 'post_detail' post.slug  %}"
+                                        class="post-link"><button class="btn btn-info">Read
+                                            More</button></a></p>
                             </div>
 
                             <p class="card-text text-muted h6">{{ post.created_on}}
