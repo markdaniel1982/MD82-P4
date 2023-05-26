@@ -166,7 +166,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-FAVICON_URL = BASE_DIR
+# FAVICON_URL = [os.path.join(BASE_DIR, 'static', 'favicon', 'favicon.ico'), ]
 
 
 # Default primary key field type
