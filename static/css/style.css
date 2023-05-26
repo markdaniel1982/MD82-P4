@@ -196,6 +196,10 @@ a {
     z-index: 100;
 }
 
+.post-image {
+    max-height: 400px;
+}
+
 .comment-delete {
     float: right;
 

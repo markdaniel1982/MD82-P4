@@ -23,9 +23,10 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://picsum.photos/seed/picsum/200/300?blur=2" width="100%" class="post-detail-image">
+                <img src="https://picsum.photos/seed/picsum/200/300?blur=2" width="100%"
+                    class="post-image post-detail-image">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img class="post-image" src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -42,26 +43,23 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-
                     <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
-                                {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
-                                {% endif %}
-                            </form>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="fas fa-heart"></i></button>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="far fa-heart"></i></button>
                             {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        {% endif %}
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
@@ -101,15 +99,14 @@
                         <form action="{% url 'comment_delete' comment.id post.slug %}" method="POST">
                             {% csrf_token %}
                             <button class="btn" type="submit" onclick="return confirm('Delete Comment?')"
-                                alt="Delete Comment" aria-label="Delete Comment"><i class="fa-solid fa-trash"
-                                    alt="Delete"></i></button>
+                                alt="Delete Comment" aria-label="Delete Comment"><i
+                                    class="fa-solid fa-trash"></i></button>
                         </form>
                         {% endif %}
                         {% endif %}
                     </div>
                     </p>
                     <div class="col-8">
-
 
                         <!-- The body of the comment -->
                         {{ comment.body }}
