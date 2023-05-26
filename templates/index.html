@@ -50,7 +50,7 @@
                                     </p>
                                 </div>
                                 <div class="category-flash">
-                                    <p><i class="fa-solid fa-table-list category"></i> | <a
+                                    <p><i class="fa-solid fa-table-list category"></i> | <a class="category-link"
                                             href="{% url 'category' post.category %}">{{ post.category_name }}</a></p>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                                     <p class="card-text">{{ post.content|safe|slice:":200" }}</p>
                                 </div>
                                 <p class="read-more"><a class="post-link btn btn-info"
-                                        href="{% url 'post_detail' post.slug  %}"></a></p>
+                                        href="{% url 'post_detail' post.slug  %}">Read More</a></p>
                             </div>
 
                             <p class="card-text text-muted h6">{{ post.created_on}}

@@ -122,7 +122,14 @@ a {
     padding: 5px;
 }
 
-#category a {
+/* #category a {
+    text-decoration: none;
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+} */
+
+.category-link {
     text-decoration: none;
     color: white;
     margin: 4px;
