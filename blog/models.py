@@ -29,7 +29,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
-    category = models.CharField(max_length=255, default='Fishing')
+    category = models.CharField(max_length=255, default='fishing')
 
     class Meta:
         ordering = ["-created_on"]
