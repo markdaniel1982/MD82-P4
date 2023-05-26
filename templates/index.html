@@ -10,11 +10,11 @@
         picture to display all posts within that category!
         <br><br>
         Thanks for popping in.
-    <div class="row">
-        <span class="text-muted text-center"><i class="fa-solid fa-arrow-down"></i> click anywhere above this line to
-            hide <i class="fa-solid fa-arrow-down"></i></span>
-    </div>
     </p>
+    <div class="row">
+        <span class="text-muted text-center"><i class="fa-solid fa-arrow-up"></i> click anywhere above this line to
+            hide <i class="fa-solid fa-arrow-up"></i></span>
+    </div>
     <script>
         function hideIntro() {
             document.getElementById("intro-container").style.display = "none";
@@ -34,9 +34,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="https://picsum.photos//300?blur=2" alt="uploaded image">
+                                <img class="card-img-top" src="https://picsum.photos//300?blur=2" alt="">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="uploaded image">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author | {{ post.author }}
@@ -50,7 +50,7 @@
                                     </p>
                                 </div>
                                 <div class="category-flash">
-                                    <p id="category"><i class="fa-solid fa-table-list"></i></i> | <a
+                                    <p><i class="fa-solid fa-table-list category"></i> | <a
                                             href="{% url 'category' post.category %}">{{ post.category_name }}</a></p>
                                 </div>
                             </div>
@@ -60,11 +60,9 @@
                                         <h2 class="card-title">{{ post.title }}</h2>
                                     </div>
                                     <p class="card-text">{{ post.content|safe|slice:":200" }}</p>
-                                    </a>
                                 </div>
-                                <p class="read-more"><a href="{% url 'post_detail' post.slug  %}"
-                                        class="post-link"><button class="btn btn-info">Read
-                                            More</button></a></p>
+                                <p class="read-more"><a class="post-link btn btn-info"
+                                        href="{% url 'post_detail' post.slug  %}"></a></p>
                             </div>
 
                             <p class="card-text text-muted h6">{{ post.created_on}}
