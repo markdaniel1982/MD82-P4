@@ -122,13 +122,6 @@ a {
     padding: 5px;
 }
 
-/* #category a {
-    text-decoration: none;
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-} */
-
 .category-link {
     text-decoration: none;
     color: white;
@@ -201,6 +194,11 @@ a {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
+}
+
+.comment-delete {
+    float: right;
+
 }
 
 #social-link {

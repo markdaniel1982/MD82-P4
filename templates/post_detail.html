@@ -80,7 +80,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-8 card mb-4  mt-3 comment-delete-container">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -92,13 +92,9 @@
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
-                        </span><span class="deletebutton"> wrote:
-                    </p>
-                    <div>
-                        <!-- The body of the comment -->
-                        {{ comment.body }}
-
+                        </span> wrote:
                         <!-- allow users to delete their own comments -->
+                    <div class="col-sm-2 comment-delete">
                         {% if request.user.is_authenticated %}
                         {% if request.user.username == comment.name or request.user.is_superuser %}
 
@@ -110,6 +106,15 @@
                         </form>
                         {% endif %}
                         {% endif %}
+                    </div>
+                    </p>
+                    <div class="col-8">
+
+
+                        <!-- The body of the comment -->
+                        {{ comment.body }}
+
+                        <hr>
                     </div>
                     </span>
 
@@ -144,7 +149,7 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                 </form>
                 {% else %}
                 <h3>Please <a href="{% url 'account_login' %}?next={{request.path}}">login</a> in to leave a comment
