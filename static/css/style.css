@@ -197,6 +197,10 @@ a {
     z-index: 100;
 }
 
+#social-link {
+    color: #fff;
+}
+
 .post-link {
     text-decoration: none;
     color: #445261;

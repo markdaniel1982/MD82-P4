@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span><img id="navlogo"
-                        src="{% static 'media/mfa_logo.png' %}" alt=""></span></a>
+                        src="{% static 'media/mfa_logo.png' %}" alt="Logo"></span></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,8 @@
                     </li>
                     {% endif %}
 
-                    <span class="logotext">My Fishing Adventures</span></li>
+                    <span class="logotext">My Fishing Adventures</span>
+
                 </ul>
                 <span class="navbar-text text-muted">
                     Fishing Adventures in Northern Sweden!
@@ -100,11 +101,15 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">&copy; Mark Daniel - For Educational Purposes Only</p>
-        <p class="m-0 text-center text-white">Follow me: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitch ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <p class="m-0 text-center text-white">&copy;
+            <script>document.write(new Date().getFullYear())</script> Mark Daniel - For Educational Purposes Only
+        </p>
+        <p class="m-0 text-center text-white">Follow me: <i id="social-link" class="fab fa-facebook-square ms-3"></i>
+            <a href="https://www.twitch.tv/djmarkdaniel"><i id="social-link" class="fab fa-twitch ms-3"></i></a>
+            <a href="https://soundcloud.com/djmarkdaniel"><i id="social-link"
+                    class="fa-brands fa-soundcloud ms-3"></i></a>
+            <a href="https://www.youtube.com/channel/UClJUH7n0xCbdvEzgQ4G84gg"><i id="social-link"
+                    class="fab fa-youtube-square ms-3"></i></a>
         </p>
     </footer>
     <script>
