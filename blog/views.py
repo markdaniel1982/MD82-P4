@@ -9,9 +9,13 @@ from django.urls import reverse, reverse_lazy
 
 # Function based category view
 # CODE CREDIT - John Elder(codemy/youtube)
+
+
 def CategoryView(request, cats):
     category_posts = Post.objects.filter(category=cats)
-    return render(request, 'categories.html', {'cats': cats.title, 'category_posts': category_posts})
+    return render(
+        request, 'categories.html', {
+            'cats': cats.title, 'category_posts': category_posts})
 
 
 class PostList(generic.ListView):
@@ -95,24 +99,32 @@ class CommentDeleteView(DeleteView):
         return f'/{post_slug}/'
 
 # CODE CREDIT - John Elder(codemy/youtube)
+
+
 class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
 
 # CODE CREDIT - John Elder(codemy/youtube)
+
+
 class AddCategoryView(CreateView):
     model = Category
     template_name = 'add_category.html'
     fields = '__all__'
 
 # CODE CREDIT - John Elder(codemy/youtube)
+
+
 class EditPostView(UpdateView):
     model = Post
     form_class = EditPostForm
     template_name = 'update_post.html'
 
 # CODE CREDIT - John Elder(codemy/youtube)
+
+
 class DeletePostView(DeleteView):
     model = Post
     template_name = 'delete_post.html'

@@ -51,7 +51,7 @@
                                     <div>
                                         <h2 class="card-title">{{ post.title }}</h2>
                                     </div>
-                                    <p class="card-text">{{ post.content|slice:":200" }}</p>
+                                    <p class="card-text">{{ post.content|safe|slice:":200" }}</p>
                                     </a>
                                 </div>
                                 <p class="read-more"><a href="{% url 'post_detail' post.slug  %}"
