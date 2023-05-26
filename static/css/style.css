@@ -33,7 +33,7 @@ li {
     font-size: 6vw;
     position: relative;
     top: 14px;
-    left: 10%;
+    right: 10%;
 }
 
 #navlogo {
@@ -44,14 +44,10 @@ li {
 .navbar-nav {
     display: flex;
     flex-direction: column;
-    padding-left: 0;
+    margin-left: -46px;
     margin-bottom: 0;
     list-style: none;
     align-items: center;
-}
-
-.nav-link-adjusted {
-    padding-left: 50px;
 }
 
 a {
@@ -257,4 +253,17 @@ a {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+@media only screen and (max-width: 1400px) {
+    .logotext {
+        font-size: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .logotext {
+        font-size: 3vw;
+    }
+
 }
