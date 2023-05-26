@@ -1,8 +1,8 @@
-. {
+/* . {
     padding: 0;
     margin: 0;
     border: 0;
-}
+} */
 
 body {
     background-color: #F9FAFC;
@@ -32,7 +32,8 @@ li {
     font-family: 'Tangerine', sans-serif;
     font-size: 6vw;
     position: relative;
-    right: 13%;
+    top: 14px;
+    left: 10%;
 }
 
 #navlogo {
@@ -68,10 +69,6 @@ a {
     padding-bottom: 1rem;
     display: flex;
     justify-content: center;
-}
-
-#account-btn {
-    background-color: #23BBBB;
 }
 
 .category-title {

@@ -34,9 +34,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="https://picsum.photos//300?blur=2">
+                                <img class="card-img-top" src="https://picsum.photos//300?blur=2" alt="uploaded image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="uploaded image">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author | {{ post.author }}

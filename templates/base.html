@@ -70,13 +70,11 @@
         <nav class="navbar navbar-sm navbar-light bg-secondary">
             <div class="admin-panel">
                 Admin Panel |
-                <span class="btn btn-info">
-                    <form style="display: inline" action="{% url 'add_post' %}" method="get">
-                        <button>Add Post</button>
-                    </form>
-                    <form style="display: inline" action="{% url 'add_category' %}" method="get">
-                        <button>Add Category</button>
-                    </form>
+                <span>
+                    <a class="button btn btn-secondary bg-dark" style="display:inline-block" href="{% url 'add_post' %}"
+                        aria-label="Add Post">Add Post</a>
+                    <a class="button btn btn-secondary bg-dark" style="display:inline-block"
+                        href="{% url 'add_category' %}" aria-label="Add Post">Add Category</a>
                 </span>
             </div>
         </nav>
