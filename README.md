@@ -1,12 +1,15 @@
 # My Fishing Adventures
+
 ### My Adventures in Northern Sweden
 
-![My Fishing Adventures](documentation/images/logotext.webp)
+![My Fishing Adventures](documentation/images/logotext.png)
 
-Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute
+Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
 ___
 
-My Fishing Adventures is a fullstack blog site that allows users to read blog posts, create an account and comment on various blog posts.
+My Fishing Adventures is a blog, mainly to record and share my fishing trips, but also share other types/categories of content and allow users to interact with myself and other
+
+It is a fullstack blog site that allows users to read blog posts, create an account and comment on the posts.
 
 Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herokuapp.com/)
 
@@ -15,9 +18,28 @@ Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herok
 - [My Fishing Adventures](#my-fishing-adventures)
     - [My Adventures in Northern Sweden](#my-adventures-in-northern-sweden)
   - [CONTENTS](#contents)
-  - [What's a README?](#whats-a-readme)
-  - [What makes a Good README?](#what-makes-a-good-readme)
-  - [README Examples](#readme-examples)
+  - [Site Objectives](#site-objectives)
+- [User Experience/UX](#user-experienceux)
+  - [Target Audience](#target-audience)
+  - [User Stories](#user-stories)
+    - [New Visitor Goals](#new-visitor-goals)
+    - [Existing Visitor Goals](#existing-visitor-goals)
+- [Design Choices](#design-choices)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Logo and Favicon](#logo-and-favicon)
+- [Features](#features)
+  - [Registration](#registration)
+- [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Programming Languages, Frameworks and Libraries Used](#programming-languages-frameworks-and-libraries-used)
+- [Agile](#agile)
+- [Testing](#testing)
+  - [Testing](#testing-1)
+    - [User](#user)
+  - [Bugs](#bugs)
+  - [Validation Testing](#validation-testing)
+    - [HTML \& CSS](#html--css)
   - [How to Write Your README](#how-to-write-your-readme)
     - [Headings](#headings)
     - [Links](#links)
@@ -32,31 +54,168 @@ Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herok
     - [Media](#media)
     - [Acknowledgments](#acknowledgments)
 
-- - -
+___
 
-## What's a README?
+## Site Objectives
 
-A README file should be the source of all information relating to your project.
+Design and create a blog site to demonstrate an increasing understanding of the libraries and frameworks available to developers.
 
-It is where another developer (or yourself in a few months time!) can get an overview of your project, like why was this project made, what technology was used, instructions on how to fork or clone the project if they wanted to have a tinker with it, any future implementations planned for the project and if there were any interesting bugs encountered during the build.
+My three main objectives were:
 
-- - -
+- ### Create a readable, clean and responsive front end
 
-## What makes a Good README?
+  I wanted to make the site easily accessible and intuitively navigated for the users. Django and Bootstrap were used to create and style the front end.
 
-You can never have enough detail! you've spent a large amount of time perfecting your first project (and each subsequent project will be even more labour intensive and detailed) and the readme is the place to document and celebrate all those hours.
+- ### Make use of available backend functionality
 
-The best piece of advice I was given was to try and complete the bulk of the README before you write a single line of code.
+  The use of the backend framework allows users to create a profile, comment on any of the blog posts on the site, as well as deleting their own comments should they wish to.
 
-By incorporating this step into the planning stage of your project you will have taken the time to think about what your user stories will be, what colour palette you want to use for your site, what fonts you want to use, how you plan to layout the site responsively and with accessibility in mind and have these documented in your README file before you begin to code your project. The README will then become your roadmap -  it will help you to focus on the project, allow the coding to flow, and prevent you having to complete a whole README at the end of your project when you're suffering from project fatigue!
+- ### Store data on an external cloud database
 
-- - -
+  I used ElephantSQL to store the PostgreSQL databse for this project.
 
-## README Examples
+___
 
-I have included examples of a [README.md](milestone1-readme.md) and [TESTING.md](milestone1-testing.md) for you to look over to get an idea of how you can layout your files and what should be included. I have based this off the README's I have created for my own projects, however I would urge you to make sure that you go through your course criteria for your project to make sure that you include everything required in your own README, as the requirements may change at any point.
+# User Experience/UX
 
-- - -
+## Target Audience
+
+- Users that are interested in fishing, northern Swedish landscapes and cats!
+
+## User Stories
+
+### New Visitor Goals
+
+- To understand what the site and content is about.
+- How to navigate the site.
+- Create an account and engage with the site and other users and site owner.
+
+### Existing Visitor Goals
+
+- Log in and out of their account.
+- Read blog posts and comments on each post.
+- Add their own comments on blog posts on the site to engage with site owner and other users.
+
+___
+
+# Design Choices
+
+## Colour Scheme
+
+The colour scheme used for this project was based on the colors from Code Institute's 'I think therefore i blog' walkthrough module. I have added and modified many aspects of the styling and colours to suit my intentions. It is a fairly neutral scheme, with mostly only the actionable aspects (buttons/links etc) displayed in brighter colours for ease of navigation or site use.
+
+## Typography
+
+The main font used is Verdana, but Tangerine was used for the main logo text on the navbar
+
+## Logo and Favicon
+
+The logo was created using an online logo creator - [Brandcrowd](https://www.brandcrowd.com/)
+
+# Features
+
+## Registration
+
+The user can create an account
+
+![Create an Account](documentation/images/create_account.png)
+
+View Blog Posts on Home Page
+
+![View Blog Posts on Home Page](documentation/images/home.png)
+
+Browse by Post Category
+
+![Browse by Post Category](documentation/images/browse_by_category.png)
+
+Comment on Blog Posts.
+
+*Also shown here is the trashcan which allows users to delete their own comments should they wish.*
+
+![Comment on Blog Posts](documentation/images/commenting.png)
+
+# Future Features
+
+- Add option for users to edit comments
+- Add option for users to upload photos into the comments
+
+___
+
+# Technologies Used
+
+Here are the technologies used to build this project:
+
+- [Github](https://github.com) To host and store the data for the site.
+- [CodeAnywhere](https://www.codeanywhere.com) the IDE where the site was built.
+- [PEP8 Validator](https://pep8ci.herokuapp.com/) Used to check python code for errors
+- [ElephandSQL](https://www.elephantsql.com/) Used to store PostgreSQL database.
+- [Cloudinary](https://cloudinary.com/) Used as cloud storage for images uploaded as part of the blog posts
+- [Heroku](https://id.heroku.com/login) Used to deploy the project
+
+# Programming Languages, Frameworks and Libraries Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+# Agile
+
+This project was designed using Agile methodology, utilising the Project Board and Issues sections in GitHub
+
+- [Project Board](https://github.com/users/markdaniel1982/projects/4/views/1)
+
+# Testing
+
+As each section or function/Model was built during this project, I was testing for functionality and styling issues that may have arisen, which were corrected or fixed before continuing. I also had friends test the site by signing up, adding and deleting comments using various devices on varying platforms (IOS, Android, Mobile Tablet etc) and reporting back any issues they encountered with functionality or styling.
+
+## Testing
+
+*For any Fails, there is a more detailed description below the table*
+
+ADMIN
+| TEST | OUTCOME | PASS/FAIL|
+|:---:|:---:|:---:|
+| Create Blog Post | Post successfully created and displayed | Pass |
+| Edit Blog Post | Error thrown when editing post title & slug <sup>(1)</sup> | FAIL |
+| Edit Blog Post (after fix) | Post content and category updated successfully | Pass |
+| Delete User Comments | Comment deleted successfully | Pass |
+| Delete Blog Post | Post deleted successfully | Pass |
+
+<sup>(1)</sup> - While testing the ability to edit posts (Limited to Admin only), I had a problem when editing the title and slug of the post. this was due to the URL not being able to find the slug of the post to route it after the edit. At this stage, I felt the easiest fix was to remove the ability to edit the post title and slug in the browser, but this functionality is still available via the django admin panel.
+
+### User
+
+| TEST | OUTCOME | PASS/FAIL|
+|:---:|:---:|:---:|
+| Create Account | Created successfully | Pass |
+| Login | Login Successful | Pass |
+| Logout | Logout Successful | Pass |
+| Read Full Blog Post | PostDetail page loaded successfully | Pass |
+| Add Comment under Blogpost | Comment Added Successfully | Pass |
+| Delete Comment | Comment Deleted | Pass |
+| Filter Posts by category | Posts marked as desired category displayed successfully | Pass |
+
+## Bugs
+
+One of my users reported that they were unable to sign up when including an email address (although the inclusion of an email address is not required), but myself and others were unable to replicate this issue so the bug was marked as closed.
+
+At different points throughout this project, I encountered various bugs involving the styling. These usually appeared after adding a new section or template page. These were all fixed using Bootstrap classes or custom CSS to override any issues caused by Bootstrap itself.
+
+Towards the end of completion, I had an issue with the database, where I had made a change to the Post Model, but hadn't migrated the changes after undoing the changes in the code relating to that change. This required me to reset the database, which was done with help from Rebecca via the Code Institute's Tutor Support. The changes related to the Category Model and the choices available when creating an account.
+
+To enable me to reset the database, I first had to comment out the code (related to "choices" in the model) to stop the code being run and causing an error. Once this was done, the database was reset, seemingly without issue.
+
+Then I had a problem with the "Create a Post" page. When adding a new blog post via the browser, the images were not being sent to cloudinary for cloud storage, and the ElephantSQL cloud database was also not recieving any data. This was a very simple f
+
+## Validation Testing
+
+### HTML & CSS
+
+HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
+
+
 
 ## How to Write Your README
 
@@ -112,9 +271,9 @@ When using images in your README, its good practice to compress the image first 
 
 ~~strikethrough~~ We use double tilder before and after.
 
-* Bullet points, we use either an asterisk or a dash.
-  * Nested Bullet Points are created by indenting two spaces
-    * Another Nested Bullet Point
+- Bullet points, we use either an asterisk or a dash.
+  - Nested Bullet Points are created by indenting two spaces
+    - Another Nested Bullet Point
 
 ![Strikethrough & Bullet Point Example](documentation/strikethrough-bullet-example.png)
 
@@ -199,11 +358,11 @@ Nice extras we could include in the README:
 
 [shields.io Badges](https://shields.io/) -  lots of badges relating to site builds. I like to add these after the site image at the top of my README. I like to include the following badges in my projects, but have an explore and see if there are any others you could use (they are also great to include in your GitHub Profile!)
 
-* GitHub last commit (Shows when the last commit to the repo was)
-* GitHub contributors (Great to show at a glance you are the only contributor to your project)
-* GitHub language count (Shows how many languages used in project)
-* GitHub top language (to display top language used in the project)
-* W3C validation (shows at a glance whether your HTML passes validation)
+- GitHub last commit (Shows when the last commit to the repo was)
+- GitHub contributors (Great to show at a glance you are the only contributor to your project)
+- GitHub language count (Shows how many languages used in project)
+- GitHub top language (to display top language used in the project)
+- W3C validation (shows at a glance whether your HTML passes validation)
 
 ![Shields.io Exmaple Badges](documentation/shields-example.png)
 
@@ -219,10 +378,10 @@ Nice extras we could include in the README:
 
 ## Further Reading
 
-* [Markdown Syntax](https://www.markdownguide.org/basic-syntax/) - This site is really comprehensive on all the different things you can do in Markdown.
-* [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) - This may be useful to have a play around with to better understand how tables work in Markdown.
-* [Markdown Cheatsheet](https://github.com/atapas/markdown-cheatsheet) - A great markdown cheatsheet created by Atapas.
-* [Code Institute Sample README](https://github.com/Code-Institute-Solutions/SampleREADME) - Sample README created by the Code Institute
+- [Markdown Syntax](https://www.markdownguide.org/basic-syntax/) - This site is really comprehensive on all the different things you can do in Markdown.
+- [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) - This may be useful to have a play around with to better understand how tables work in Markdown.
+- [Markdown Cheatsheet](https://github.com/atapas/markdown-cheatsheet) - A great markdown cheatsheet created by Atapas.
+- [Code Institute Sample README](https://github.com/Code-Institute-Solutions/SampleREADME) - Sample README created by the Code Institute
 
 ## Credits
 
@@ -234,7 +393,7 @@ Nice extras we could include in the README:
 
 ### Acknowledgments
 
-* [Ed](https://github.com/Edb83) - For letting me know about the heading links feature.
-* [Dave](https://github.com/daveyjh) - For letting me know about table justification in markdown.
-* Nerd Alert - For cheering me on while creating this webinar, and for proof-reading my documents.
-* A big thank you to Jim at Code Institute for the opportunity to be a channel lead for the Milestone 1 slack channel.
+- [Ed](https://github.com/Edb83) - For letting me know about the heading links feature.
+- [Dave](https://github.com/daveyjh) - For letting me know about table justification in markdown.
+- Nerd Alert - For cheering me on while creating this webinar, and for proof-reading my documents.
+- A big thank you to Jim at Code Institute for the opportunity to be a channel lead for the Milestone 1 slack channel.
