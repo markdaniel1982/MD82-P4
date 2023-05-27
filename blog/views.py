@@ -8,7 +8,7 @@ from .forms import CommentForm, PostForm, EditPostForm
 from django.urls import reverse, reverse_lazy
 
 # Function based category view
-# CODE CREDIT - John Elder(codemy/youtube)
+# CODE CREDIT - John Elder(codemy/youtube) - Code adapted for personal use
 
 
 def CategoryView(request, cats):
@@ -98,7 +98,7 @@ class CommentDeleteView(DeleteView):
         post_slug = self.kwargs["post_slug"]
         return f'/{post_slug}/'
 
-# CODE CREDIT - John Elder(codemy/youtube)
+# CODE CREDIT - John Elder(codemy/youtube) - Code adapted for personal us - Code adapted for personal use
 
 
 class AddPostView(CreateView):
@@ -106,7 +106,7 @@ class AddPostView(CreateView):
     form_class = PostForm
     template_name = 'add_post.html'
 
-# CODE CREDIT - John Elder(codemy/youtube)
+# CODE CREDIT - John Elder(codemy/youtube) - Code adapted for personal us - Code adapted for personal use
 
 
 class AddCategoryView(CreateView):
@@ -114,7 +114,7 @@ class AddCategoryView(CreateView):
     template_name = 'add_category.html'
     fields = '__all__'
 
-# CODE CREDIT - John Elder(codemy/youtube)
+# CODE CREDIT - John Elder(codemy/youtube) - Code adapted for personal us - Code adapted for personal use
 
 
 class EditPostView(UpdateView):
@@ -122,7 +122,7 @@ class EditPostView(UpdateView):
     form_class = EditPostForm
     template_name = 'update_post.html'
 
-# CODE CREDIT - John Elder(codemy/youtube)
+# CODE CREDIT - John Elder(codemy/youtube) - Code adapted for personal us - Code adapted for personal use
 
 
 class DeletePostView(DeleteView):
