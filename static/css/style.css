@@ -50,6 +50,10 @@ li {
     align-items: center;
 }
 
+.nav-link-logout a {
+    text-decoration: none;
+}
+
 a {
     color: #4A4A4F;
     text-decoration: none;
