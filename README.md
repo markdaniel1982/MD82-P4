@@ -207,7 +207,7 @@ Towards the end of completion, I had an issue with the database, where I had mad
 
 To enable me to reset the database, I first had to comment out the code (related to "choices" in the model) to stop the code being run and causing an error. Once this was done, the database was reset, seemingly without issue.
 
-Then I had a problem with the "Create a Post" page. When adding a new blog post via the browser, the images were not being sent to cloudinary for cloud storage, and the ElephantSQL cloud database was also not recieving any data. This was a very simple f
+Then I had a problem with the "Create a Post" page. When adding a new blog post via the browser, the images were not being sent to cloudinary for cloud storage, and the ElephantSQL cloud database was also not recieving any data. This was a very simple fix as I needed to add ```enctype="multipart/form-data"``` into the form element.
 
 ## Validation Testing
 
@@ -215,6 +215,7 @@ Then I had a problem with the "Create a Post" page. When adding a new blog post 
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
+![HTML Validation - base.html](documentation/testing_documentation/validation/index.html_validation_complete.webp)
 
 
 ## How to Write Your README
