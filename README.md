@@ -16,7 +16,7 @@ Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herok
 ## CONTENTS
 
 - [My Fishing Adventures](#my-fishing-adventures)
-  - [My Adventures in Northern Sweden](#my-adventures-in-northern-sweden)
+    - [My Adventures in Northern Sweden](#my-adventures-in-northern-sweden)
   - [CONTENTS](#contents)
   - [Site Objectives](#site-objectives)
 - [User Experience/UX](#user-experienceux)
@@ -28,21 +28,27 @@ Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herok
   - [Colour Scheme](#colour-scheme)
   - [Typography](#typography)
   - [Logo and Favicon](#logo-and-favicon)
+  - [Wireframes](#wireframes)
+  - [Flow Diagram](#flow-diagram)
+  - [Database Plam](#database-plam)
 - [Features](#features)
   - [Registration](#registration)
-- [Future Features](#future-features)
+  - [Future Features](#future-features)
+  - [Features Not Included](#features-not-included)
 - [Technologies Used](#technologies-used)
 - [Programming Languages, Frameworks and Libraries Used](#programming-languages-frameworks-and-libraries-used)
 - [Agile](#agile)
 - [Testing](#testing)
-  - [Testing](#testing-1)
-    - [User](#user)
+  - [Manual Testing](#manual-testing)
+  - [User](#user)
   - [Bugs](#bugs)
+  - [Lighthouse](#lighthouse)
   - [Validation Testing](#validation-testing)
     - [HTML \& CSS](#html--css)
+  - [Python Testing](#python-testing)
   - [Credits](#credits)
-    - [Media](#media)
-    - [Acknowledgments](#acknowledgments)
+  - [Media](#media)
+  - [Acknowledgments and Thanks](#acknowledgments-and-thanks)
 
 ___
 
@@ -158,7 +164,6 @@ Comment on Blog Posts.
 
 - Add option for users to edit comments
 
-
 ## Features Not Included
 
 - Add option for users to upload photos into the comments
@@ -266,12 +271,12 @@ Python pep8 validation was done via [Code Institute's Python Linter](https://pep
 The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but this has no effect on the functionality of the project.
 
 Python Files Tested:
-models.py
-forms.py
-views.py
-urls.py
 
+- models- forms.py
+- views
+- urls.
 ___
+
 
 ## Credits
 
