@@ -104,13 +104,33 @@ The logo was created using an online logo creator - [Brandcrowd](https://www.bra
 
 ## Wireframes
 
-[Mobile Homepage Wireframe]()
+- Mobile Homepage Wireframe
 
-[Mobile Post Detail Wireframe]()
+![Mobile Homepage Wireframe](documentation/wireframes/mobile_homepage_wireframe.png)
 
-[Desktop Homepage Wireframe]()
+- Mobile Post Detail Wireframe
 
-[Desktop Post Detail Wireframe]()
+![Mobile Post Detail Wireframe](documentation/wireframes/mobile_post_detail_wireframe.png)
+
+- Desktop Homepage Wireframe
+
+![Desktop Homepage Wireframe](documentation/wireframes/desktop_homepage_wireframe.png)
+
+- Desktop Post Detail Wireframe
+
+![Desktop Post Detail Wireframe](documentation/wireframes/desktop_postdetail_wireframe.png)
+
+## Flow Diagram
+
+Here is a diagram showing the possible flow through the site. There are 2 sections shown here. On the left it shows the Admin and the right shows a site user.
+
+![Site Flow Diagram](documentation/diagrams/site_flow_diagram.png)
+
+## Database Plam
+
+The database plan is fairly simple, but it shows the information that is stored within the database, the type of data and if it is logged as a Primary or Foreign key where applicable.
+
+![Database plan](documentation/diagrams/database_plan.png)
 
 # Features
 
@@ -134,9 +154,12 @@ Comment on Blog Posts.
 
 ![Comment on Blog Posts](documentation/images/commenting.png)
 
-# Future Features
+## Future Features
 
 - Add option for users to edit comments
+
+## Features Not Included
+
 - Add option for users to upload photos into the comments
 
 ___
@@ -256,6 +279,8 @@ This project was based on the Code Institute's - I think therefore I blog walkth
 For a lot of inspiration and fine-tuning of my code I referred to John Elder's youtube channel [Codemy](https://www.youtube.com/@Codemycom) where I was able to get a better understanding of how to correctly create this type of product using Django and Bootstrap
 
 The Readme layout was inspired by [Kera Cudmore - Readme Examples](https://github.com/kera-cudmore/readme-examples/blob/main/README.md?plain=1)  and [Sdalsosa - Readme](https://github.com/Sdalsosa/ComposerHub/blob/main/README.md)
+
+The wireframe mockups were created using [Figma](https://www.figma.com/files/recent?fuid=1244316583749443526)
 
 ___
 
