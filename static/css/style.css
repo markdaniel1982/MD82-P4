@@ -63,7 +63,7 @@ a {
     padding-left: 1rem;
 }
 
-
+/* Introduction Text */
 .introduction {
     font-family: "Verdana", sans-serif;
     width: 60vw;
@@ -71,10 +71,6 @@ a {
     padding-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
-}
-
-.category-title {
-    text-transform: uppercase;
 }
 
 .thin {
@@ -93,6 +89,7 @@ a {
     background-color: #F9FAFC;
 }
 
+/* Post Detail & Home Page Styling */
 .card {
     border: none;
     background-color: transparent;
@@ -109,6 +106,10 @@ a {
     left: -2px;
     background-color: #23BBBB;
     border-radius: 5px;
+}
+
+.category-title {
+    text-transform: uppercase;
 }
 
 .category-flash {
@@ -204,18 +205,6 @@ a {
     max-height: 400px;
 }
 
-.comment-delete {
-    float: right;
-}
-
-.add-post-form {
-    max-width: 60vw;
-}
-
-#social-link {
-    color: #fff;
-}
-
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -236,6 +225,22 @@ a {
     color: lightgray;
 }
 
+.comment-delete {
+    float: right;
+}
+
+.add-post-form {
+    max-width: 60vw;
+}
+
+/* Social Links */
+#social-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Buttons */
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
@@ -271,6 +276,8 @@ a {
     border: none;
 }
 
+/* Media Queries */
+/* To remove the logo text on smaller device screens */
 @media only screen and (max-width: 1400px) {
     .logotext {
         display: none;
