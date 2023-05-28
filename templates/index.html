@@ -2,8 +2,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div id="intro-container" onclick="hideIntro()">
-    <p class="introduction">
+<div id="intro-container">
+    <p class="introduction h-100 d-flex align-items-center justify-content-center">
         Welcome to my blog. Here I will post mainly about fishing, but occasionally about other things too.
         <br><br>
         If you want to filter my posts by category, then click on the category displayed in the top right of each
@@ -11,15 +11,6 @@
         <br><br>
         Thanks for popping in.
     </p>
-    <div class="row">
-        <span class="text-muted text-center"><i class="fa-solid fa-arrow-up"></i> click anywhere above this line to
-            hide <i class="fa-solid fa-arrow-up"></i></span>
-    </div>
-    <script>
-        function hideIntro() {
-            document.getElementById("intro-container").style.display = "none";
-        }
-    </script>
 </div>
 <hr>
 <div class="container-fluid">
