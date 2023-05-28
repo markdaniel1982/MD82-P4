@@ -158,6 +158,7 @@ Comment on Blog Posts.
 
 - Add option for users to edit comments
 
+
 ## Features Not Included
 
 - Add option for users to upload photos into the comments
@@ -218,7 +219,7 @@ ADMIN
 | Read Full Blog Post | PostDetail page loaded successfully | Pass |
 | Add Comment under Blogpost | Comment Added Successfully | Pass |
 | Delete Comment | Comment Deleted | Pass |
-| Filter Posts by category | Posts marked as desired category displayed successfully | Pass |
+| Filter Posts by category | Posts marked as selected category displayed successfully | Pass |
 
 ## Bugs
 
