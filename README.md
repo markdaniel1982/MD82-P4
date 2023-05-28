@@ -102,6 +102,16 @@ The main font used is Verdana, but Tangerine was used for the main logo text on 
 
 The logo was created using an online logo creator - [Brandcrowd](https://www.brandcrowd.com/)
 
+## Wireframes
+
+[Mobile Homepage Wireframe]()
+
+[Mobile Post Detail Wireframe]()
+
+[Desktop Homepage Wireframe]()
+
+[Desktop Post Detail Wireframe]()
+
 # Features
 
 ## Registration
@@ -211,7 +221,6 @@ Desktop
 
 ![Lighthouse Desktop Score](documentation/images/lighthouse_desktop.png)
 
-
 ## Validation Testing
 
 ### HTML & CSS
@@ -267,6 +276,7 @@ Rebecca at Code Institute's tutor support for the database reset.
 John Elder on the [Codemy](https://www.youtube.com/@Codemycom) youtube channel
 
 Manual Testers:
+
 - Liz Mayhew
 - Tom Mayhew
 - Nush
