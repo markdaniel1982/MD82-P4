@@ -46,6 +46,12 @@ Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herok
   - [Validation Testing](#validation-testing)
     - [HTML \& CSS](#html--css)
   - [Python Testing](#python-testing)
+  - [Deployment](#deployment)
+    - [Github Deployment](#github-deployment)
+    - [Creating a Fork or Copying](#creating-a-fork-or-copying)
+    - [Clone](#clone)
+    - [Repository deployment via Heroku](#repository-deployment-via-heroku)
+      - [Deployment of the app](#deployment-of-the-app)
   - [Credits](#credits)
   - [Media](#media)
   - [Acknowledgments and Thanks](#acknowledgments-and-thanks)
@@ -174,12 +180,13 @@ ___
 
 Here are the technologies used to build this project:
 
+- [CodeAnywhere](https://codeanywhere.com/) To build and create this project
 - [Github](https://github.com) To host and store the data for the site.
 - [CodeAnywhere](https://www.codeanywhere.com) the IDE where the site was built.
 - [PEP8 Validator](https://pep8ci.herokuapp.com/) Used to check python code for errors
 - [ElephandSQL](https://www.elephantsql.com/) Used to store PostgreSQL database.
 - [Cloudinary](https://cloudinary.com/) Used as cloud storage for images uploaded as part of the blog posts
-- [Heroku](https://id.heroku.com/login) Used to deploy the project
+- [Heroku](https://id.heroku.com/) Used to deploy the project
 
 # Programming Languages, Frameworks and Libraries Used
 
@@ -211,6 +218,7 @@ ADMIN
 | Edit Blog Post (after fix) | Post content and category updated successfully | Pass |
 | Delete User Comments | Comment deleted successfully | Pass |
 | Delete Blog Post | Post deleted successfully | Pass |
+| Create 7 Test Posts to check Pagination | Next/Previous Page Appears at bottom of screen | Pass |
 
 <sup>(1)</sup> - While testing the ability to edit posts (Limited to Admin only), I had a problem when editing the title and slug of the post. This was due to the URL not being able to find the original slug of the post (because it had been changed during the edit) to route it after the editing was complete. At this stage, I felt the easiest fix was to remove the ability to edit the post title and slug in the browser, but this functionality is still available via the django admin panel.
 
@@ -225,6 +233,7 @@ ADMIN
 | Add Comment under Blogpost | Comment Added Successfully | Pass |
 | Delete Comment | Comment Deleted | Pass |
 | Filter Posts by category | Posts marked as selected category displayed successfully | Pass |
+| Create User Account to check access to restricted pages (add_post, add_category)| Page displayed correct error message, with no access to restricted content | Pass |
 
 ## Bugs
 
@@ -272,11 +281,61 @@ The only errors recieved here were where some lines of text exceeded the limit o
 
 Python Files Tested:
 
-- models- forms.py
+- models
+- forms
 - views
-- urls.
+- urls
+
 ___
 
+## Deployment
+
+### Github Deployment
+
+The website was stored using GitHub data storage and version control. To do this I did the following;
+
+1. After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
+
+- git add .
+- git commit -m "meaningful commit message"
+- git push
+
+The files are now available to view within your github repository.
+
+### Creating a Fork or Copying
+
+To clone/fork/copy the repository you click on the fork tab which is situated next to unwatch tab in the top right corner of the page
+
+### Clone
+
+To create a clone you do the following;
+
+1. Click on the code tab, left of the Gitpod tab
+2. To the right of the repository name, click the clipboard icon
+3. In the IED open GitBash
+4. Change the working directory to the location you prefer
+5. Add Git Clone with the copy of the repository name
+6. Clone has been created
+
+### Repository deployment via Heroku
+
+- On the <https://dashboard.heroku.com/apps> page, click New and then select Create New App from the drop-down menu.
+- When the next page loads insert the App name and Choose a region. The click Create app
+- In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
+1.Cloudinary URL
+2.Postgres Database URL
+3.Port (8000)
+- Below this click Add buildpack and choose python and nodejs in that order.
+
+#### Deployment of the app
+
+- Click on the Deploy tab and select Github-Connect to Github.
+- Enter the repository name and click Search.
+- Choose the repository that holds the correct files and click Connect.
+- A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
+- Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button which should appear below the build information window, alternatively, there is another button located in the top right of the page.
+
+---
 
 ## Credits
 
