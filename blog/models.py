@@ -6,7 +6,9 @@ from django.urls import reverse
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 # CODE CREDIT - John Elder(codemy/youtube) - Code adapted for personal use
+
 class Category(models.Model):
     name = models.CharField(max_length=200, unique=True)
 
