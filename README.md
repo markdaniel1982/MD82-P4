@@ -30,7 +30,7 @@ Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herok
   - [Logo and Favicon](#logo-and-favicon)
   - [Wireframes](#wireframes)
   - [Flow Diagram](#flow-diagram)
-  - [Database Plam](#database-plam)
+  - [Database Plan](#database-plan)
 - [Features](#features)
   - [Registration](#registration)
   - [Future Features](#future-features)
@@ -74,7 +74,7 @@ My three main objectives were:
 
 - ### Store data on an external cloud database
 
-  I used ElephantSQL to store the PostgreSQL databse for this project.
+  I used ElephantSQL to store the PostgreSQL database for this project.
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 ## Colour Scheme
 
-The colour scheme used for this project was based on the colors from Code Institute's 'I think therefore i blog' walkthrough module. I have added and modified many aspects of the styling and colours to suit my intentions. It is a fairly neutral scheme, with mostly only the actionable aspects (buttons/links etc) displayed in brighter colours for ease of navigation or site use.
+The colour scheme used for this project was based on the colors from Code Institute's 'I think therefore I blog' walkthrough module. I have added and modified many aspects of the styling and colours to suit my intentions. It is a fairly neutral scheme, with only the actionable aspects (buttons/links etc) displayed in brighter colours for ease of navigation or site use.
 
 ## Typography
 
@@ -138,7 +138,7 @@ Here is a diagram showing the possible flow through the site. There are 2 sectio
 
 ![Site Flow Diagram](documentation/diagrams/site_flow_diagram.png)
 
-## Database Plam
+## Database Plan
 
 The database plan is fairly simple, but it shows the information that is stored within the database, the type of data and if it is logged as a Primary or Foreign key where applicable.
 
@@ -168,11 +168,12 @@ Comment on Blog Posts.
 
 ## Future Features
 
-- Add option for users to edit comments
+- Add an option for users to edit comments
+- Add profile page for users to add profile image and edit personal details
 
 ## Features Not Included
 
-- Add option for users to upload photos into the comments
+- Add an option for users to upload photos into the comments
 
 ___
 
@@ -204,7 +205,7 @@ This project was designed using Agile methodology, utilising the Project Board a
 
 # Testing
 
-As each section or function/Model was built during this project, I was testing for functionality and styling issues that may have arisen, which were corrected or fixed before continuing. I also had friends test the site by signing up, adding and deleting comments using various devices on varying platforms (IOS, Android, Mobile Tablet etc) and reporting back any issues they encountered with functionality or styling.
+As each section or Function/Model was built during this project, I was testing for functionality and styling issues that may have arisen (see table below), which were corrected or fixed before continuing. I also had friends test the site by signing up, adding and deleting comments using various devices on varying platforms (IOS, Android, Mobile, Tablet etc) and reporting back any issues they encountered with functionality or styling.
 
 ## Manual Testing
 
@@ -214,19 +215,20 @@ ADMIN
 | TEST | OUTCOME | PASS/FAIL|
 |:---:|:---:|:---:|
 | Create Blog Post | Post successfully created and displayed | Pass |
-| Edit Blog Post | Error thrown when editing post title & slug <sup>(1)</sup> | FAIL |
+| Edit Blog Post | Error thrown when editing post title & slug (*) | FAIL |
 | Edit Blog Post (after fix) | Post content and category updated successfully | Pass |
 | Delete User Comments | Comment deleted successfully | Pass |
 | Delete Blog Post | Post deleted successfully | Pass |
 | Create 7 Test Posts to check Pagination | Next/Previous Page Appears at bottom of screen | Pass |
 
-<sup>(1)</sup> - While testing the ability to edit posts (Limited to Admin only), I had a problem when editing the title and slug of the post. This was due to the URL not being able to find the original slug of the post (because it had been changed during the edit) to route it after the editing was complete. At this stage, I felt the easiest fix was to remove the ability to edit the post title and slug in the browser, but this functionality is still available via the django admin panel.
+(*) - While testing the ability to edit posts (Limited to Admin only), I had a problem when editing the title and slug of the post. This was due to the URL not being able to find the original slug of the post (because it had been changed during the edit) to route it after the editing was complete. At this stage, I felt the easiest fix was to remove the ability to edit the post title and slug in the browser, but this functionality is still available via the django admin panel.
 
 ## User
 
 | TEST | OUTCOME | PASS/FAIL|
 |:---:|:---:|:---:|
 | Create Account | Created successfully | Pass |
+| Error Check - Error page when signing up with email address | Unable to replicate(*) | Closed |
 | Login | Login Successful | Pass |
 | Logout | Logout Successful | Pass |
 | Read Full Blog Post | PostDetail page loaded successfully | Pass |
@@ -234,6 +236,8 @@ ADMIN
 | Delete Comment | Comment Deleted | Pass |
 | Filter Posts by category | Posts marked as selected category displayed successfully | Pass |
 | Create User Account to check access to restricted pages (add_post, add_category)| Page displayed correct error message, with no access to restricted content | Pass |
+
+(*) See Bugs below
 
 ## Bugs
 
@@ -249,7 +253,7 @@ Then I had a problem with the "Create a Post" page. When adding a new blog post 
 
 ## Lighthouse
 
-The performance scores appear to be low, and I believe this is due to the images uploaded for each blog post are hosted on a third-party cloud based platform.
+The performance scores appear to be low, and I believe this is due to the images uploaded for each blog post being hosted on a third-party cloud-based platform.
 
 Mobile
 
@@ -265,7 +269,7 @@ Desktop
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
-When validating the code, I had the error shown below. this was fixed by removing the button, and using Bootstrap styles to display the link as a button instead
+When validating the code, I had the error shown below. this was fixed by removing the button and using Bootstrap styles to display the link as a button instead
 
 ![HTML Validation - Descendant Error](documentation/testing_documentation/validation/base.html_button_descendant.png)
 
@@ -292,9 +296,9 @@ ___
 
 ### Github Deployment
 
-The website was stored using GitHub data storage and version control. To do this I did the following;
+The website was stored using GitHub for storage of data and version control. To do this I did the following;
 
-1. After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
+After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
 
 - git add .
 - git commit -m "meaningful commit message"
@@ -319,12 +323,14 @@ To create a clone you do the following;
 
 ### Repository deployment via Heroku
 
-- On the <https://dashboard.heroku.com/apps> page, click New and then select Create New App from the drop-down menu.
-- When the next page loads insert the App name and Choose a region. The click Create app
+- On the [Heroku Dashboard](https://dashboard.heroku.com) page, click New and then select Create New App from the drop-down menu.
+- When the next page loads insert the App name and Choose a region. Then click 'Create app'
 - In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
-1.Cloudinary URL
-2.Postgres Database URL
-3.Port (8000)
+
+1. Cloudinary URL
+2. Postgres Database URL
+3. Port (8000)
+
 - Below this click Add buildpack and choose python and nodejs in that order.
 
 ### Deployment of the app
@@ -335,37 +341,41 @@ To create a clone you do the following;
 - A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
 - Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button which should appear below the build information window, alternatively, there is another button located in the top right of the page.
 
----
+___
 
 ## Credits
 
-This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard blog 'base'. From this base I customised a lot of the layout and styling with Bootstrap and custom CSS. I also added a custom model for Category. This allowed me to create a functionality within the site for users to filter the blog posts by a selected category. I added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
+This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard blog 'base'. From this base I customised a lot of the layout and styling with Bootstrap and custom CSS. I also added a custom model for Category. This allowed me to create a functionality within the site for users to filter the blog posts by a selected category.
 
-For a lot of inspiration and fine-tuning of my code I referred to John Elder's youtube channel [Codemy](https://www.youtube.com/@Codemycom) where I was able to get a better understanding of how to correctly create this type of product using Django and Bootstrap
+I also added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
 
-The Readme layout was inspired by [Kera Cudmore - Readme Examples](https://github.com/kera-cudmore/readme-examples/blob/main/README.md?plain=1)  and [Sdalsosa - Readme](https://github.com/Sdalsosa/ComposerHub/blob/main/README.md)
+For inspiration and fine-tuning of my code, I referred to John Elder's youtube channel [Codemy](https://www.youtube.com/@Codemycom) where I was able to get a better understanding of how to correctly create this type of product using Django and Bootstrap.
 
-The wireframe mockups were created using [Figma](https://www.figma.com/files/recent?fuid=1244316583749443526)
+The Readme layout was based on the example by [Kera Cudmore - Readme Examples](https://github.com/kera-cudmore/readme-examples/blob/main/README.md?plain=1) and [Sdalsosa - Readme](https://github.com/Sdalsosa/ComposerHub/blob/main/README.md)
+
+The wireframe mockups were created using [Figma](https://https://www.figma.com/)
+
+Once complete, the readme file was passed through a spelling and grammar check via [Grammarly](https://www.grammarly.com/)
 
 ___
 
 ## Media
 
-For placeholder images when no image is uploaded to blog post, I have used [picsum](https://picsum.photos/) which provides a library of stock images that display as a placeholder
+For placeholder images when no image is uploaded to blog post, I have used [picsum](https://picsum.photos/) which provides a library of stock images that display as a placeholder.
 
-All other content and images are my own
+All other content and images are my own.
 
 ___
 
 ## Acknowledgments and Thanks
 
-Sean & Oisin at Code Institute's tutor support for the help and guidance with my code related brain-melts.
+Sean & Oisin at Code Institute's tutor support for the help and guidance with my code-related brain melts.
 
-Rebecca at Code Institute's tutor support for the database reset.
+Rebecca at Code Institute's tutor support for the database reset guidance.
 
 John Elder on the [Codemy](https://www.youtube.com/@Codemycom) youtube channel
 
-Manual Testers:
+For help with manual testing:
 
 - Liz Mayhew
 - Tom Mayhew
