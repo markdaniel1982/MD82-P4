@@ -2,7 +2,7 @@
 
 ### My Adventures in Northern Sweden
 
-![My Fishing Adventures](documentation/images/logotext.png)
+![My Fishing Adventures](documentation/images/responsive.png)
 
 Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
 ___
@@ -51,7 +51,7 @@ Link to live site - [https://md82p4blog.herokuapp.com/](https://md82p4blog.herok
     - [Creating a Fork or Copying](#creating-a-fork-or-copying)
     - [Clone](#clone)
     - [Repository deployment via Heroku](#repository-deployment-via-heroku)
-      - [Deployment of the app](#deployment-of-the-app)
+    - [Deployment of the app](#deployment-of-the-app)
   - [Credits](#credits)
   - [Media](#media)
   - [Acknowledgments and Thanks](#acknowledgments-and-thanks)
@@ -277,7 +277,7 @@ Fixed:
 
 Python pep8 validation was done via [Code Institute's Python Linter](https://pep8ci.herokuapp.com/)
 
-The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but this has no effect on the functionality of the project.
+The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but these have now been rectified.
 
 Python Files Tested:
 
@@ -327,7 +327,7 @@ To create a clone you do the following;
 3.Port (8000)
 - Below this click Add buildpack and choose python and nodejs in that order.
 
-#### Deployment of the app
+### Deployment of the app
 
 - Click on the Deploy tab and select Github-Connect to Github.
 - Enter the repository name and click Search.
