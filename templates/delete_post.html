@@ -11,7 +11,8 @@
         <form method="POST">
             {% csrf_token %}
             Are you sure you want to delete the post titled: <strong> {{ post.title }} </strong>?<br><br>
-            <div><button class='btn btn-info' type="submit" value="Post">Delete Post?</button></div>
+            <div><button class='btn btn-info' type="submit" value="Post" aria-label="Delete Post">Delete Post?</button>
+            </div>
     </div>
 
 </div>

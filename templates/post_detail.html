@@ -23,9 +23,10 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://picsum.photos/seed/picsum/200/300?blur=2" class="post-image post-detail-image">
+                <img src="https://picsum.photos/seed/picsum/200/300?blur=2" class="post-image post-detail-image"
+                    alt="placeholder image">
                 {% else %}
-                <img class="post-image" src=" {{ post.featured_image.url }}">
+                <img class="post-image" src=" {{ post.featured_image.url }}" alt="dynamic image">
                 {% endif %}
             </div>
         </div>
